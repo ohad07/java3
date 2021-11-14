@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="todofrom">
+<input type="text " id="todoinput">
+<button type="submit">Add</button>
+
+    </form>
+    <ul id="todolist"></ul>
+    
+</body>
+<script>
+    const todolist=[];
+document.getElementById("todofrom")
+        .addEventListener("submit", function(event){
+event.preventDefault();
+const todoinput=document.getElementById("todoinput").value;
+todolist.push(todoinput);
+console.log(todolist);
+        });
+
+
+
+    //loop of for to give condition to repeat till a fix value
+    for (let a=0; a<10; a+=2) {
+        console.log("a:" , a)
+    }
+</script>
+
+
+</html>

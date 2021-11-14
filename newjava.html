@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javacondition</title>
+</head>
+<body>
+  
+  <h1 id="result"></h1>
+  <input type="number" placeholder="enter your city temperature" id="temperature">
+  <button type="submit" 
+   onclick="getResult()" >
+  Get suggestion</button>
+</body>
+<script>
+function handleDoubleclick(){
+    alert("Button is doublr click")
+}
+    const isUserAutnenticated=true;
+    const result=document.getElementById("result")
+    // const temp=20;
+// if key word
+function getResult(){
+    const temp=parseInt(document.getElementById("temperature").value)
+
+    if(temp<20){
+result.innerText="please wear jeck before going outside"
+    }else if(temp>20 && temp<30){
+result.innerText="please wear  normal shirt before going outside"
+    }else if(temp> 30){
+result.innerText="please wear  Tshirt before going outside"
+    }
+    //safe fail
+    else{
+        result.innerHTML=" <i> wear </i>  what ever you like before going outside"
+    }
+}
+    // if temp is between 20 to 30
+//     if(temp>20 && temp<30){
+// result.innerText="please wear  normal shirt before going outside"
+//     }
+//     if(temp> 30){
+// result.innerText="please wear  Tshirt before going outside"
+//     }
+
+// ondblclick="handleDoubleclick()"
+//   onmouseenter="handleDoubleclick()"
+//  onmouseleave="handleDoubleclick()"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>  
+</html>
