@@ -16,13 +16,27 @@
     
 </body>
 <script>
-    const todolist=[];
+    let todolist=[];
 document.getElementById("todofrom")
         .addEventListener("submit", function(event){
 event.preventDefault();
 const todoinput=document.getElementById("todoinput").value;
+const todolist=document.getElementById("todolist");
 todolist.push(todoinput);
-console.log(todolist);
+document.getElementById("todoinput").value ="";
+console.log("todolist:",todolist);
+const newlistItem=document.createElement("li");
+newlistItem.innerText=todoinput;
+todolist.appendChild(newlistItem);
+
+
+// for( let index=0; index<todolist.length;index++){
+//     const todolist = todolist[index];
+//     const newlistItem=document.createElement("l1");
+//     newlistItem.innerText=todo;
+//     todolist.appendChild(newlistItem);
+//     console.log(newlistItem);
+// }
         });
 
 
